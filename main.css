@@ -46,7 +46,7 @@ body {
 
 body:after {
     display: none;
-    content: url("images/background/rainer.JPG") url("images/background/rainer.JPG")
+    content: url("images/background/seattle2.jpg") url("images/background/seattle2.jpg")
 }
 
 h1,
@@ -678,14 +678,14 @@ pre>code {
 }
 
 .shallow-bg {
-    background-image: url("images/background/rainer.JPG");
+    background-image: url("images/background/seattle2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center
 }
 
 .deep-bg {
-    background-image: url("images/background/rainer.JPG");
+    background-image: url("images/background/seattle2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center
@@ -1932,4 +1932,12 @@ div.paginate-container li:nth-last-child(2) a:after {
     .project-content h4 {
         font-size: 18px
     }
+}
+
+.trigger {
+  text-align: center;
+}
+.trigger .page-link {
+  display: inline-block;
+  float: none;
 }
