@@ -97,6 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a class="page-link" href="#timeline"><b>Education</b></a>
     <a class="page-link" href="#timeline"><b>Experiences</b></a>
     <a class="page-link" href="#publications"><b>Publications</b></a>
+    <a class="page-link" href="interesting-sites.html"><b>Interesting Sites</b></a>
     <!-- <a class="page-link" href="#teaching"><b>Teaching </b></a> -->
     <!-- <a class="page-link" href="#academicservices"><b>Professional Services </b></a> -->
     <!-- <a class="page-link" href="#misc"><b>CV</b></a> -->
@@ -529,8 +530,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </a>
       </div>
 	<div class="footer-col footer-col-3">
-    <p class="text">Last updated: July, 2025.<br>The style of this website is borrowed from <a href='https://www.hexianghu.com/'>Hexiang Hu's</a>.</p>
-	</div>
+    <p class="text">Last updated: <span id="last-updated"></span>.<br>The style of this website is borrowed from <a href='https://www.hexianghu.com/'>Hexiang Hu's</a>.</p>
+ 	</div>
   </div>
   </div>
 
@@ -554,6 +555,12 @@ jQuery(document).ready(function() {
         jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
     })
+    try {
+      var last = new Date(document.lastModified);
+      var formatted = last.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+      var el = document.getElementById('last-updated');
+      if (el) { el.textContent = formatted; }
+    } catch (e) {}
 });
 </script>
   </body>
